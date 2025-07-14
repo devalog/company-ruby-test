@@ -1,27 +1,26 @@
 # frozen_string_literal: true
-
 require "ostruct"
 require "json"
 
 module DevinClassNameTest
-  class Imdb
+  module Imdb
     class Movie
-      # @return [String]
+    # @return [String] 
       attr_reader :id
-      # @return [String]
+    # @return [String] 
       attr_reader :title
-      # @return [Float] The rating scale out of ten stars
+    # @return [Float] The rating scale out of ten stars
       attr_reader :rating
-      # @return [OpenStruct] Additional properties unmapped to the current class definition
+    # @return [OpenStruct] Additional properties unmapped to the current class definition
       attr_reader :additional_properties
-      # @return [Object]
+    # @return [Object] 
       attr_reader :_field_set
       protected :_field_set
 
       OMIT = Object.new
 
-      # @param id [String]
-      # @param title [String]
+      # @param id [String] 
+      # @param title [String] 
       # @param rating [Float] The rating scale out of ten stars
       # @param additional_properties [OpenStruct] Additional properties unmapped to the current class definition
       # @return [DevinClassNameTest::Imdb::Movie]
@@ -32,10 +31,9 @@ module DevinClassNameTest
         @additional_properties = additional_properties
         @_field_set = { "id": id, "title": title, "rating": rating }
       end
-
-      # Deserialize a JSON object to an instance of Movie
+# Deserialize a JSON object to an instance of Movie
       #
-      # @param json_object [String]
+      # @param json_object [String] 
       # @return [DevinClassNameTest::Imdb::Movie]
       def self.from_json(json_object:)
         struct = JSON.parse(json_object, object_class: OpenStruct)
@@ -50,19 +48,17 @@ module DevinClassNameTest
           additional_properties: struct
         )
       end
-
-      # Serialize an instance of Movie to a JSON object
+# Serialize an instance of Movie to a JSON object
       #
       # @return [String]
-      def to_json(*_args)
+      def to_json
         @_field_set&.to_json
       end
-
-      # Leveraged for Union-type generation, validate_raw attempts to parse the given
-      #  hash and check each fields type against the current object's property
-      #  definitions.
+# Leveraged for Union-type generation, validate_raw attempts to parse the given
+#  hash and check each fields type against the current object's property
+#  definitions.
       #
-      # @param obj [Object]
+      # @param obj [Object] 
       # @return [Void]
       def self.validate_raw(obj:)
         obj.id.is_a?(String) != false || raise("Passed value for field obj.id is not the expected type, validation failed.")

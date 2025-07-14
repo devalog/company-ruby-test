@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 require_relative "test_helper"
 require "devin_test_package"
 
