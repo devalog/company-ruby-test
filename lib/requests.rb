@@ -38,7 +38,7 @@ end
     end
     # @return [Hash{String => String}]
     def get_headers
-      headers = { "X-Fern-Language": 'Ruby', "X-Fern-SDK-Name": 'devin_test_package', "X-Fern-SDK-Version": '0.0.5' }
+      headers = { "X-Fern-Language": 'Ruby', "X-Fern-SDK-Name": 'devin_test_package', "X-Fern-SDK-Version": '0.0.6' }
  headers
     end
   end
@@ -74,7 +74,7 @@ end
     end
     # @return [Hash{String => String}]
     def get_headers
-      headers = { "X-Fern-Language": 'Ruby', "X-Fern-SDK-Name": 'devin_test_package', "X-Fern-SDK-Version": '0.0.5' }
+      headers = { "X-Fern-Language": 'Ruby', "X-Fern-SDK-Name": 'devin_test_package', "X-Fern-SDK-Version": '0.0.6' }
  headers
     end
   end
