@@ -11,7 +11,7 @@ require_relative "lib/gemconfig"
 
 Gem::Specification.new do | spec |
   spec.name = "devin_test_package"
-  spec.version = "0.0.6"
+  spec.version = "0.0.7"
   spec.authors = DevinClassNameTest::Gemconfig::AUTHORS
   spec.email = DevinClassNameTest::Gemconfig::EMAIL
   spec.summary = DevinClassNameTest::Gemconfig::SUMMARY
